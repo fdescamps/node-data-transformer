@@ -1,0 +1,27 @@
+{
+  "author": "François Descamps",
+  "license": "UNLICENSED",
+  "groupId": "fr.fdescamps",
+  "artifactId": "node-data-transformer",
+  "version": "1.0.0",
+  "main": "main.js",
+  "name": "node-data-transformer",
+  "description": "A transformer tool that take a template (with mappings, operations) in order to transform data in another format",
+  "scripts": {
+    "eslint": "eslint --fix './*.js'",
+    "istanbul": "./node_modules/.bin/istanbul cover -x \"*.spec.js\" ./node_modules/mocha/bin/_mocha -- --require ./configureMocha.js \"*.spec.js\"",
+    "test": "./node_modules/.bin/_mocha --require './configureMocha.js' '*.spec.js'",
+    "build": "npm run eslint && npm run istanbul"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "lodash": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "eslint": "^3.13.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.2"
+  }
+}
